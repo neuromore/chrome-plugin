@@ -76,7 +76,7 @@ Source: [WebsocketProtocol.h:336-369][layout].
 
 Studio compares `url` exactly with the URLs in the state machine's conditions ([WebsocketServer.cpp:333][url-condition]). It reads no fields of the three player messages: they only set the matching state transition condition. All four have no effect without an active state machine.
 
-Studio also accepts `IMPERSONATION`, which the extension never sends. It logs and ignores binary frames from clients ([WebsocketServer.cpp:157-161][binary-recv]) and messages of unknown types.
+Studio logs and ignores binary frames from clients ([WebsocketServer.cpp:157-161][binary-recv]) and messages of unknown types.
 
 ## Binary feedback frames
 

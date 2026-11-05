@@ -27,7 +27,7 @@
  *   src/Engine/Graph/Actions.cpp                player and URL actions, progress as a 0..1 fraction
  *
  * Deliberate differences from Studio:
- *   - It listens on 127.0.0.1 only. Studio listens on all interfaces.
+ *   - It listens on 127.0.0.1 only.
  *   - It has no state machine, so client messages are logged and have no effect.
  *   - A session is already running at startup, so a client gets frames right away.
  *   - It never sends ON_STATEMACHINE_LOADED or ON_EXPERIENCE_LOADED, which the

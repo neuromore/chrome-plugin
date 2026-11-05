@@ -368,7 +368,6 @@ describe("malformed input", () => {
     "a null header": '{"header":null}',
     "a non-string type": '{"header":{"type":5},"data":{}}',
     "an unknown type": jsonMessage("SOMETHING_NEW"),
-    "IMPERSONATION echoed back": jsonMessage("IMPERSONATION", { uuid: "x" }),
     "a layout with no data": '{"header":{"type":"ON_FEEDBACK_LAYOUT"}}',
     "a layout that is not an array": jsonMessage("ON_FEEDBACK_LAYOUT", { feedbacks: "x" }),
     "a player start with no data": '{"header":{"type":"BROWSER_START_PLAYER"}}',
