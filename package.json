@@ -1,0 +1,29 @@
+{
+  "name": "neuromore-chrome-extension",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Development tooling for the neuromore Chrome extension. The extension itself lives in extension/.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=26"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node --test \"test/unit/**/*.test.js\"",
+    "test:e2e": "node --test \"test/e2e/**/*.test.js\"",
+    "mock-studio": "node tools/mock-studio.js",
+    "package": "node tools/package.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.14.0",
+    "globals": "^17.14.0",
+    "jsdom": "^31.0.0",
+    "playwright": "^1.64.1",
+    "prettier": "^3.9.10",
+    "ws": "^8.22.1"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "neuromore",
+  "description": "Adjust the volume and brightness of the active tab with neurofeedback from neuromore Studio.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "homepage_url": "https://github.com/neuromore/chrome-plugin",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "controlWidget.html",
+    "default_icon": {
+      "16": "assets/img/logo16.png",
+      "32": "assets/img/logo32.png",
+      "48": "assets/img/logo48.png",
+      "128": "assets/img/logo128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/img/logo16.png",
+    "32": "assets/img/logo32.png",
+    "48": "assets/img/logo48.png",
+    "128": "assets/img/logo128.png"
+  }
+}

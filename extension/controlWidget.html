@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>neuromore</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <h1>How to control your browser with neurofeedback</h1>
+      <h2>1. Open a website</h2>
+      <p>
+        Open a website of your choice, for example one of the sites below, then reopen this
+        extension on that page.
+      </p>
+      <ul class="site-links">
+        <li><a href="https://www.netflix.com" target="_blank" rel="noopener">Netflix</a></li>
+        <li><a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.primevideo.com" target="_blank" rel="noopener">Prime Video</a></li>
+        <li><a href="https://open.spotify.com" target="_blank" rel="noopener">Spotify</a></li>
+        <li><a href="https://music.apple.com" target="_blank" rel="noopener">Apple Music</a></li>
+      </ul>
+      <h2>2. Connect to neuromore Studio</h2>
+      <p>Open neuromore Studio, then click Connect to link it to this tab.</p>
+      <div class="connection-buttons">
+        <button id="connectButton" type="button" class="btn">Connect</button>
+        <button id="disconnectButton" type="button" class="btn">Disconnect</button>
+      </div>
+      <p id="connection-error" role="alert"></p>
+      <h2>3. Run a biofeedback session</h2>
+      <p>
+        Start a session in the Studio and observe the brightness and volume changing in your
+        browser.
+      </p>
+    </main>
+    <script src="src/js/control.js"></script>
+  </body>
+</html>

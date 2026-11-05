@@ -1,0 +1,27 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Package and publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+      # tools/package.js has no npm dependencies, so this job, which holds a
+      # write token, installs nothing. It fails unless the tag is v<manifest version>.
+      - run: npm run package -- --check-tag "$GITHUB_REF_NAME"
+      - run: gh release create "$GITHUB_REF_NAME" dist/neuromore-extension-*.zip --verify-tag --generate-notes
+        env:
+          GH_TOKEN: ${{ github.token }}
